@@ -3,7 +3,7 @@ import Pageflex.Scripting;
 import Pageflex.Scripting.Exceptions;
 import System.Diagnostics;
 
-class Actions
+class Resize
 {
 	static function setPageDimensionsInch(){ //Sets the page to the size of the Width and Height Variables in Inches
 		var vWidth = Application.GetVariable('Width').Value*72;

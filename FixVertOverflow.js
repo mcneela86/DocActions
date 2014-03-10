@@ -5,11 +5,11 @@ import System.Diagnostics;
 
 class Actions
 {
-static function setMainBodyHeight(){ 
-		var bodyCopy = Application.CurrentDocument.FindElement('BodyCopy');
+static function setMainBodyHeight(MainGroup,Primary,SecondaryContainer){ 
+		var bodyCopy = Application.CurrentDocument.FindElement(Primary);
 		var buffers = 17;
-		var mainHeightPt = Application.CurrentDocument.FindElement('Page1VerticalGroup').Height + "";
-		var footnotesHeightPt = Application.CurrentDocument.FindElement('FootnotesVerticalGroup').Height + "";
+		var mainHeightPt = Application.CurrentDocument.FindElement(MainGroup).Height + "";
+		var footnotesHeightPt = Application.CurrentDocument.FindElement(SecondaryContainer).Height + "";
 		var mLen = mainHeightPt.length;
 		var fLen = footnotesHeightPt.length;
 		
