@@ -5,7 +5,10 @@ import System.Diagnostics;
 
 class Actions
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7a5382389d92235ecc1cce18e57f7fe2a2742a09
 	static function sequenceNumb(path) {
 		//get the current record and place it on each page	
 		var currentRecord = Application.CurrentRecordNumber();
