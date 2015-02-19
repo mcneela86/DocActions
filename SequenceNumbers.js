@@ -5,14 +5,14 @@ import System.Diagnostics;
 
 class Actions
 {
-	static function sequenceNumb(phrase) { //phrase to find and replace with sequence number
-		//get the current record and place it on each page
+	static function sequenceNumb() {
+		//get the current record and place it on each page	
 		var currentRecord = Application.CurrentRecordNumber();
 		currentRecord = ' 00' + currentRecord.toString();
 		//Application.Log("Current Record is:"+ currentRecord);
-		var numb = Application.CurrentDocument.FindText(phrase,true,true);
+		var numb = Application.CurrentDocument.FindText('InsertRecordNumb',true,true);
 		for(var i = 0; i < numb.length; i++){
-			numb[i].Text = currentRecord;
+		numb[i].Text = currentRecord;
 		}
 	}	
 }
